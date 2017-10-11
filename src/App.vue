@@ -2,7 +2,8 @@
   <div id="app">
     <router-link to="/my">跳转</router-link>
     <router-view></router-view>
-    <el-button type="primary" @click="getData">主要按钮</el-button>
+
+    <el-button type="primary" @click="getData" class="my-btn">主要按钮</el-button>
     <el-button type="text">文字按钮</el-button>
     <ul>
       <li v-for="obj of bookList">{{obj.name}}</li>
@@ -44,6 +45,9 @@ export default {
 </script>
 
 <style>
+.my-btn{
+  margin-top: 100px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

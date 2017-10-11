@@ -56,3 +56,18 @@
 		import axios from 'axios'
 		Vue.prototype.$http = axios;
 	-在需要请求接口的地方使用this.$http()或this.$http.get()或this.$http.post()进行数据交互
+11、vuex的使用
+	1、本地安装vuex
+	cnpm install vuex -S
+	2、创建一个独立的vuex的js文件，取名为store.js
+	3、在main.js中导入Vuex
+		import Vuex from 'vuex'
+		import store from './store.js' //引入vuex的配置文件
+		Vue.use(Vuex)
+		new Vue({
+
+		el: '#app',
+		  router,
+		  store, //注入store
+		  render: h => h(App)
+		})
